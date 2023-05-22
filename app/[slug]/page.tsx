@@ -1,50 +1,44 @@
-// // "use client"
-// import { getCard } from "../../sanity/config/sanity-utils";
-// import { PortableText } from "@portabletext/react";
-// import Write from "@/components/heroCard/write/page";
-// import Image from "next/image";
-// import Container from "@/components/layout/container/page";
+import { getPost } from "@/sa/schemas/posts/util/page";
+import { PortableText } from "@portabletext/react";
+import Write from "../../components/heroCard/write/page";
+import Container from "@/components/layout/container/page";
+type Props = {
+  params: { slug: string };
+};
+interface PropsData {
+  _id: string;
+  title: string;
+  slug: string;
+}
+export default async function Page({ params }: Props) {
+  const post = await getPost(params.slug);
 
-// type Props = {
-//   params: { slug: string };
-// };
-
-// export default async function Page({ params }: Props) {
-//   const page = await getCard(params.slug);
-
-//   return (
-//     <Container>
-//       <div className="grid lg:grid-cols-3 grid-cols-1 py-4 gap-4">
-//         <div className="col-span-2 mt-2">
-//           <Write
-//             title={page.title}
-//             image={page.image}
-//             publishedAt={page.publishedAt}
-//             authorName={page.author.name}
-//             authorSlug={page.author.slug}
-//             cat={page.category.title}
-//             catSlug={page.category.slug}
-//           />
-//           <PortableText value={page.body} />
-
-//           <div className="navigation-wrap justify-between flex">
-//             <a className="prev" href="#">
-//               <span className="lnr lnr-arrow-left"></span>Prev Post
-//             </a>
-//             <a className="next" href="#">
-//               Next Post<span className="lnr lnr-arrow-right"></span>
-//             </a>
-//           </div>
-//         </div>
-//         <div className="mt-2">2</div>
-//       </div>
-//     </Container>
-//   );
-// }
-import React from 'react'
-
-export default function page() {
   return (
-    <div>page</div>
-  )
+    <Container>
+      <div className="md:w-3/4 w-full mt-5">
+        <Write
+          title={post.title}
+          image={post.image}
+          publishedAt={post.publishedAt}
+          authorName={post.author.name}
+          authorSlug={post.author.slug}
+          cat={post.category.title}
+          catSlug={post.category.slug}
+        />
+        <div className="text-lg text-gray-700 mt-10 content">
+          <PortableText value={post.body} />
+        </div>
+        <div className="tag flex mr-4 py-6">
+            <span className="text-xl text-red-500 mt-1 pr-12">Tags: </span>
+            <ul  className="flex">
+          {post.tag.map((tag: PropsData) => (
+              <li className="" key={tag._id}>
+                <a className=" bg-red-400 rounded text-white py-2 px-3 mr-2 inline-block" href={tag.slug}>{tag.title}</a>
+              </li>
+          ))}
+          </ul>
+        </div>
+      </div>
+    </Container>
+  );
 }

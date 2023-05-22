@@ -43,7 +43,7 @@ export default defineType({
       type: 'date',
     }),
     defineField({
-      name: 'mainImage',
+      name: 'image',
       title: 'Main image',
       type: 'image',
       options: {

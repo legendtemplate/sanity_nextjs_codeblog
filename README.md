@@ -8,7 +8,7 @@ To learn more about, take a look at the following resources:
 - Chakura UI
 - React js
 - Next.js
-- Typescript
+- Typescript 
 - Javascript
 - ESLint
 - Prettier

@@ -1,12 +1,7 @@
-import category from './schemas/category'
-import tag from './schemas/tag'
-
-import post from './schemas/post'
-
-import author from './schemas/author'
-
-
-
+import category from './schemas/category/schema/page'
+import tag from './schemas/tag/schema/page'
+import post from './schemas/posts/schema/page'
+import author from './schemas/author/schema/page'
 import body from './schemas/body'
 
 const document = [

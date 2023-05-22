@@ -7,14 +7,15 @@ export default function index() {
     <>
       <div className="container mx-auto flex flex-wrap items-center justify-between pt-2 px-4">
         <div className="logo flex items-center md:justify-start">
-          <Image
+         <Link href='/'>
+         <Image
             src="/vercel.svg"
             height="40"
             width="40"
             alt="logo"
             title="logo"
             className="h-20 w-24"
-          />
+          /></Link>
         </div>
         <div className="banner">
           {/* <img

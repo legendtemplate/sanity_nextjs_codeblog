@@ -1,6 +1,8 @@
 import React from "react";
 import Container from "../container/page";
 import Social from '@/components/blog/left/social/inner'
+import Image from "next/image";
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -13,13 +15,15 @@ export default function page() {
                 <div className="mb-12">
                   <div className="footer-widget">
                     <div className="mb-7">
-                      <a href="">
-                        <img
-                          src="https://i.ibb.co/QDy827D/ak-logo.png"
-                          className="w-12 h-12 "
+                      <Link href="/">
+                        <Image
+                          src="/vercel.svg"
+                          className="w-28 h-8"
                           alt="logo"
+                          width='999'
+                          height='999'
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="">
                       <p className="text-sm text-gray-700 leading-relaxed mb-4">
