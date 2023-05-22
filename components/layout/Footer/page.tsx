@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../container/page";
-import Social from '@/components/blog/left/social/inner'
+import Social from './inner'
 import Image from "next/image";
 import Link from "next/link";
 
