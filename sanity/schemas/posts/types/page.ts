@@ -22,7 +22,6 @@ export type Post = {
     slug: string,
   },
   tag : {
-    map(arg0: (tag: PropsData) => import("react").JSX.Element): import("react").ReactNode;
     _id: string,
     title: string,
     slug: string,
