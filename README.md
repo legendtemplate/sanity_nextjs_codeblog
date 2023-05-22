@@ -1,15 +1,27 @@
 ## Learn More
 To learn more about, take a look at the following resources:
-
-- Html
-- CSS
-- SCSS
-- Tailwind
-- Chakura UI
-- React js
-- Next.js
-- Typescript 
-- Javascript
+> Tools
 - ESLint
 - Prettier
-- Sanity Headless CMS
+- Prisma 
+
+> Structure & Styling & Framework
+- HTML
+- CSS
+- SCSS
+- Tailwind CSS
+- Chakura UI
+- Ant Design
+- Material UI
+***
+
+> Functionality & Framework
+- Javascript 
+- Typescript 
+- React js 
+- Next js 
+***
+
+> Headless CMS
+- Sanity 
+*** 
