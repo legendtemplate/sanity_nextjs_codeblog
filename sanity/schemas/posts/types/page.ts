@@ -17,12 +17,11 @@ export type Post = {
     description: string,
   },
   category :{
-    _id: string,
     title: string,
     slug: string,
   },
   tag : {
-    _id: string,
+    map: any;
     title: string,
     slug: string,
   },
