@@ -117,7 +117,7 @@ import {
                   border={0}
                   boxShadow={'xl'}
                   bg={popoverContentBgColor}
-                  p={4}
+                  p={1}
                   rounded={'xl'}
                   minW={'sm'}>
                   <Stack>
@@ -134,7 +134,7 @@ import {
     );
   };
   
-  const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+  const DesktopSubNav = ({ label, href }: NavItem) => {
     return (
       <Link
         href={href}
@@ -151,7 +151,6 @@ import {
               fontWeight={500}>
               {label}
             </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
           </Box>
           <Flex
             transition={'all .3s ease'}
@@ -161,7 +160,7 @@ import {
             justify={'flex-end'}
             align={'center'}
             flex={1}>
-            <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+            <Icon color={'pink.400'} w={5} h={4} as={ChevronRightIcon} />
           </Flex>
         </Stack>
       </Link>
@@ -221,7 +220,9 @@ import {
             align={'start'}>
             {children &&
               children.map((child) => (
-                <Link key={child.label} py={2} href={child.href}>
+                <Link key={child.label} 
+                py={2} 
+                href={child.href}>
                   {child.label}
                 </Link>
               ))}
@@ -233,7 +234,6 @@ import {
   
   interface NavItem {
     label: string;
-    subLabel?: string;
     children?: Array<NavItem>;
     href?: string;
   }
@@ -276,10 +276,18 @@ import {
       label: 'Headless CMS',
       children: [
         {label: 'Sanity',href: '#',},
+        {label: 'Strapi',href: '#',},
       ],
     },
     {
-      label: 'Hire Designers',
+      label: 'Database',
+      children: [
+        {label: 'Vercel Postgres',href: '#',},
+        {label: 'Postgresql',href: '#',},
+      ],
+    },
+    {
+      label: 'Vercel',
       href: '#',
     },
   ];

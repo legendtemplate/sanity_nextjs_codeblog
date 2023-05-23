@@ -4,6 +4,7 @@ To learn more about, take a look at the following resources:
 - ESLint
 - Prettier
 - Prisma 
+***
 
 > Structure & Styling & Framework
 - HTML
@@ -24,4 +25,13 @@ To learn more about, take a look at the following resources:
 
 > Headless CMS
 - Sanity 
+- Strapi
 *** 
+
+> Database
+- Vercel Postgres
+- Postgresql
+*** 
+
+> Deployment
+- Vercel
